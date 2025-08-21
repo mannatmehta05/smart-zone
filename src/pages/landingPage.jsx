@@ -2,6 +2,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import { useState, useEffect } from "react"
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
+import FaqPage from "./faqPage"
 
 const LandingPage = () => {
     const [activeFaq, setActiveFaq] = useState(null);
@@ -12,24 +13,22 @@ const LandingPage = () => {
         setActiveFaq(activeFaq === index ? null : index);
     };
 
-    // 🔽 Scroll to section if hash exists
     useEffect(() => {
-        const hash = window.location.hash;
-        if (hash) {
-            const id = hash.replace('#', '');
-            const element = document.getElementById(id);
-            if (element) {
+        const scrollToId = location.state?.scrollToId;
+        if (scrollToId) {
+            const el = document.getElementById(scrollToId);
+            if (el) {
                 setTimeout(() => {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100); // Delay ensures the DOM is ready
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
             }
         }
-    }, []);
+    }, [location.state]);
 
     const faqs = [
         {
-            question: "What is Smart Zone?",
-            answer: "Smart Zone is a student engagement app that rewards you for going to school sports and arts events, taking pics, and showing school spirit."
+            question: "What is Track Inventory?",
+            answer: "Track Inventory is a student engagement app that rewards you for going to school sports and arts events, taking pics, and showing school spirit."
         },
         {
             question: "How do I earn points?",
@@ -40,7 +39,7 @@ const LandingPage = () => {
             answer: "Points can be redeemed for school-branded merch like shirts, sweatpants, shorts, and other gear - all free or discounted, just by showing up and participating."
         },
         {
-            question: "Who can use Smart Zone?",
+            question: "Who can use Track Inventory?",
             answer: "Currently, it's for high school students at participating schools. If your school isn't involved yet, let us know and we will work to bring this transformative experience to your campus."
         },
         {
@@ -57,7 +56,7 @@ const LandingPage = () => {
         },
         {
             question: "Does it cost anything to use?",
-            answer: "Nope, Smart Zone is totally free to use. Just show up, participate, and start racking up points."
+            answer: "Nope, Track Inventory is totally free to use. Just show up, participate, and start racking up points."
         },
         {
             question: "Do I need an account to use the app?",
@@ -247,7 +246,7 @@ const LandingPage = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                            Introduction to Smart Zone
+                            Introduction to Track Inventory
                         </h2>
                         <p className="text-xl text-gray-600 mb-8">
                             Where Every Game is a Story.
@@ -279,7 +278,7 @@ const LandingPage = () => {
                                 </motion.span>
                             </h3>
                             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                                Smart Zone is your all-access pass to the most exciting moments in
+                                Track Inventory is your all-access pass to the most exciting moments in
                                 high school sports and arts. Snap pics, share highlights, and earn
                                 points for showing off your school spirit. Connect and compete with
                                 friends, support your school, and unlock exclusive gear throughout
@@ -291,7 +290,7 @@ const LandingPage = () => {
                                 whileTap={{ scale: 0.95 }}
                             >
                                 <span className="flex items-center gap-2">
-                                    Interact with Smart Zone
+                                    Interact with Track Inventory
                                     <motion.svg
                                         className="w-5 h-5"
                                         fill="none"
@@ -404,8 +403,6 @@ const LandingPage = () => {
                 </div>
             </section>
 
-
-
             {/* FAQs Section */}
             <section id="faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-white scroll-mt-24">
                 <div className="max-w-4xl mx-auto">
@@ -474,6 +471,7 @@ const LandingPage = () => {
                     </motion.div>
                 </div>
             </section>
+
             <Footer />
         </div>
     )

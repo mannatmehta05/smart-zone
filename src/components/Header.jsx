@@ -24,13 +24,13 @@ const Header = () => {
   }, []);
 
   const handleNavClick = (id) => {
-    if (location.pathname === '/') {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate(`/#${id}`);
-    }
-    setIsMenuOpen(false);
-  };
+  if (location.pathname === '/') {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    navigate('/', { state: { scrollToId: id } });
+  }
+  setIsMenuOpen(false);
+};
 
  const NavLink = ({ item, index, mobile }) => (
   <motion.a
@@ -89,8 +89,9 @@ const Header = () => {
             className={`text-3xl font-bold bg-clip-text text-transparent cursor-pointer ${gradientClass}`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => navigate('/')}
           >
-            SmartZone
+            TrackInventory
           </motion.h1>
 
           {/* Desktop Nav */}

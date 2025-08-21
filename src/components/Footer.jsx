@@ -96,7 +96,7 @@ const Footer = () => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                FanFliks
+                TrackInventory
               </motion.h3>
             </motion.div>
             <motion.p
@@ -205,7 +205,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 FanFliks. All Rights Reserved.
+              © 2024 TrackInventory. All Rights Reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {[
