@@ -90,6 +90,9 @@ const TermsOfServices = () => {
 							animate="visible"
 							className="space-y-8"
 						>
+							<h1 className="text-bold text-white text-4xl mb-8 transition-all duration-700 hover:text-indigo-400 hover:tracking-widest">
+								TERMS OF SERVICE
+							</h1>
 							{/* Content Section */}
 							<motion.div
 								variants={containerVariants}
