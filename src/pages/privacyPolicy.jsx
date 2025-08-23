@@ -91,18 +91,15 @@ const PrivacyPolicy = () => {
 							className="space-y-8"
 						>
 							<motion.h1
-  className="text-bold text-white text-4xl mb-8 transition-all duration-500 hover:text-indigo-400 hover:tracking-widest"
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{
-    duration: 1,
-  }}
->
-  PRIVACY POLICY
-</motion.h1>
-
-
-
+								className="text-bold text-white text-4xl mb-8 transition-all duration-500 hover:text-indigo-400 hover:tracking-widest"
+								initial={{ opacity: 0, y: -20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{
+									duration: 1,
+								}}
+							>
+								PRIVACY POLICY
+							</motion.h1>
 							{/* Content Section */}
 							<motion.div
 								variants={containerVariants}
@@ -110,112 +107,146 @@ const PrivacyPolicy = () => {
 							>
 								<motion.div
 									variants={itemVariants}
-									className="prose prose-xl prose-invert max-w-none p-12 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl"
+									className="prose prose-base sm:prose-lg md:prose-xl prose-invert max-w-none p-6 sm:p-8 lg:p-12 bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-white/10 shadow-2xl"
 								>
+									{/* Section 1 */}
 									<motion.h2
 										variants={fadeInUp}
-										className="text-3xl font-bold text-white mb-6 flex items-center"
+										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
 									>
-										<span className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-base font-black mr-4">
+										<span className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg font-black mr-3 sm:mr-4">
 											1
 										</span>
 										ID Proof Requirement
 									</motion.h2>
-									<motion.p variants={fadeInUp} className="text-gray-200 leading-relaxed mb-10 text-lg">
+									<motion.p
+										variants={fadeInUp}
+										className="text-gray-200 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base md:text-lg"
+									>
 										Valid ID proof is mandatory for selling or exchanging used smartphones.
 									</motion.p>
 
+									{/* Section 2 */}
 									<motion.h2
 										variants={fadeInUp}
-										className="text-3xl font-bold text-white mb-6 flex items-center"
+										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
 									>
-										<span className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-base font-black mr-4">
+										<span className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg font-black mr-3 sm:mr-4">
 											2
 										</span>
 										Device Eligibility Verification
 									</motion.h2>
-									<motion.p variants={fadeInUp} className="text-gray-200 leading-relaxed mb-10 text-lg">
+									<motion.p
+										variants={fadeInUp}
+										className="text-gray-200 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base md:text-lg"
+									>
 										All used devices are checked for stolen/lost status via IMEI verification.
 									</motion.p>
 
+									{/* Section 3 */}
 									<motion.h2
 										variants={fadeInUp}
-										className="text-3xl font-bold text-white mb-6 flex items-center"
+										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
 									>
-										<span className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-base font-black mr-4">
+										<span className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg font-black mr-3 sm:mr-4">
 											3
 										</span>
 										Data Responsibility of Users
 									</motion.h2>
-									<motion.ul variants={fadeInUp} className="text-gray-200 leading-relaxed mb-10 space-y-3 text-lg">
+									<motion.p
+										variants={fadeInUp}
+										className="text-gray-200 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base md:text-lg"
+									>
 										Customers are responsible for backing up their data before service, repair, or resale.
-									</motion.ul>
+									</motion.p>
 
+									{/* Section 4 */}
 									<motion.h2
 										variants={fadeInUp}
-										className="text-3xl font-bold text-white mb-6 flex items-center"
+										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
 									>
-										<span className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-base font-black mr-4">
+										<span className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg font-black mr-3 sm:mr-4">
 											4
 										</span>
 										Data Protection & Security
 									</motion.h2>
-									<motion.p variants={fadeInUp} className="text-gray-200 leading-relaxed mb-10 text-lg">
+									<motion.p
+										variants={fadeInUp}
+										className="text-gray-200 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base md:text-lg"
+									>
 										We take reasonable security steps to protect your personal information from unauthorized access.
 									</motion.p>
 
+									{/* Section 5 */}
 									<motion.h2
 										variants={fadeInUp}
-										className="text-3xl font-bold text-white mb-6 flex items-center"
+										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
 									>
-										<span className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-base font-black mr-4">
+										<span className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg font-black mr-3 sm:mr-4">
 											5
 										</span>
 										Data Retention Policy
 									</motion.h2>
-									<motion.ul variants={fadeInUp} className="text-gray-200 leading-relaxed mb-10 space-y-3 text-lg">
+									<motion.p
+										variants={fadeInUp}
+										className="text-gray-200 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base md:text-lg"
+									>
 										We keep customer records only as long as necessary for legal, tax, and service purposes.
-									</motion.ul>
+									</motion.p>
 
+									{/* Section 6 */}
 									<motion.h2
 										variants={fadeInUp}
-										className="text-3xl font-bold text-white mb-6 flex items-center"
+										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
 									>
-										<span className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-base font-black mr-4">
+										<span className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg font-black mr-3 sm:mr-4">
 											6
 										</span>
 										Service Termination Rights
 									</motion.h2>
-									<motion.p variants={fadeInUp} className="text-gray-200 leading-relaxed mb-10 text-lg">
+									<motion.p
+										variants={fadeInUp}
+										className="text-gray-200 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base md:text-lg"
+									>
 										We may suspend or terminate access to the Service for behavior that violates these Terms or school policies.
 									</motion.p>
 
+									{/* Section 7 */}
 									<motion.h2
 										variants={fadeInUp}
-										className="text-3xl font-bold text-white mb-6 flex items-center"
+										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
 									>
-										<span className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-base font-black mr-4">
+										<span className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg font-black mr-3 sm:mr-4">
 											7
 										</span>
 										Use of Customer Information
 									</motion.h2>
-									<motion.p variants={fadeInUp} className="text-gray-200 leading-relaxed mb-10 text-lg">
+									<motion.p
+										variants={fadeInUp}
+										className="text-gray-200 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base md:text-lg"
+									>
 										Personal data is used to complete purchases, verify ownership, process warranties, and prevent fraud.
 									</motion.p>
+
+									{/* Section 10 */}
 									<motion.h2
 										variants={fadeInUp}
-										className="text-3xl font-bold text-white mb-6 flex items-center"
+										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
 									>
-										<span className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-base font-black mr-4">
+										<span className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg font-black mr-3 sm:mr-4">
 											10
 										</span>
 										Contact Information
 									</motion.h2>
-									<motion.p variants={fadeInUp} className="text-gray-200 leading-relaxed text-lg font-bold">
+									<motion.p
+										variants={fadeInUp}
+										className="text-gray-200 leading-relaxed text-sm sm:text-base md:text-lg font-bold"
+									>
 										For privacy-related queries, customers can contact us at our store or through the contact details provided.
 									</motion.p>
 								</motion.div>
 							</motion.div>
+
 						</motion.div>
 					</div>
 				</main>
@@ -224,5 +255,4 @@ const PrivacyPolicy = () => {
 		</div>
 	)
 }
-
 export default PrivacyPolicy

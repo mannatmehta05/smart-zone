@@ -24,38 +24,37 @@ const Header = () => {
   }, []);
 
   const handleNavClick = (id) => {
-  if (location.pathname === '/') {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  } else {
-    navigate('/', { state: { scrollToId: id } });
-  }
-  setIsMenuOpen(false);
-};
+    if (location.pathname === '/') {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/', { state: { scrollToId: id } });
+    }
+    setIsMenuOpen(false);
+  };
 
- const NavLink = ({ item, index, mobile }) => (
-  <motion.a
-    key={item.href}
-    onClick={() => handleNavClick(item.href)}
-    className={`group cursor-pointer ${mobile
-      ? 'block text-base px-3 py-2 rounded-lg hover:bg-pink-50'
-      : 'relative text-sm px-3 py-2'
-      } text-gray-700 hover:text-pink-600 font-medium transition-all duration-300`}
-    initial="hidden"
-    animate="visible"
-    transition={{ delay: index * 0.1 }}
-    whileHover={mobile ? { x: 10 } : { y: -2 }}
-  >
-    <span>{item.label}</span>
-    {!mobile && (
-      <motion.span
-        className={`absolute bottom-0 left-0 w-0 h-0.5 ${gradientClass}`}
-        whileHover={{ width: '100%' }}
-        transition={{ duration: 0.3 }}
-      />
-    )}
-  </motion.a>
-);
-
+  const NavLink = ({ item, index, mobile }) => (
+    <motion.a
+      key={item.href}
+      onClick={() => handleNavClick(item.href)}
+      className={`group cursor-pointer ${mobile
+          ? 'block text-base px-3 py-2 rounded-lg hover:bg-pink-50'
+          : 'relative text-sm px-3 py-2'
+        } text-gray-700 hover:text-pink-600 font-medium transition-all duration-300`}
+      initial="hidden"
+      animate="visible"
+      transition={{ delay: index * 0.1 }}
+      whileHover={mobile ? { x: 10 } : { y: -2 }}
+    >
+      <span>{item.label}</span>
+      {!mobile && (
+        <motion.span
+          className={`absolute bottom-0 left-0 w-0 h-0.5 ${gradientClass}`}
+          whileHover={{ width: '100%' }}
+          transition={{ duration: 0.3 }}
+        />
+      )}
+    </motion.a>
+  );
 
   const CTAButton = ({ mobile }) => (
     <motion.button
@@ -126,8 +125,8 @@ const Header = () => {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-xl border-t border-gray-200/50">
-                {navItems.map((item, index) => <NavLink key={index} item={item} index={index} mobile />)}
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200/50">
+                {navItems.map((item, index) => <NavLink key={index} item={item} index={index} mobile/>)}
                 <div className="pt-4"><CTAButton mobile /></div>
               </div>
             </motion.div>
@@ -137,5 +136,4 @@ const Header = () => {
     </motion.header>
   );
 };
-
 export default Header;
