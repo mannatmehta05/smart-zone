@@ -236,19 +236,19 @@ const LandingPage = () => {
             </section>
 
             {/* Introduction Section */}
-            <section id="introduction" className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative scroll-mt-24">
+            <section id="introduction" className="py-10 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white relative scroll-mt-24">
                 <div className="max-w-6xl mx-auto">
                     <motion.div
-                        className="text-center mb-16"
+                        className="text-center mb-8 sm:mb-16"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 sm:mb-6">
                             Introduction to Track Inventory
                         </h2>
-                        <p className="text-xl text-gray-600 mb-8">
+                        <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-8">
                             Where Every Game is a Story.
                         </p>
                     </motion.div>
@@ -260,7 +260,7 @@ const LandingPage = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
-                            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                            <h3 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                                 Every Moment
                                 <motion.span
                                     className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600"
@@ -277,7 +277,7 @@ const LandingPage = () => {
                                     Earns You More.
                                 </motion.span>
                             </h3>
-                            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6 sm:mb-8">
                                 Track Inventory is your all-access pass to the most exciting moments in
                                 high school sports and arts. Snap pics, share highlights, and earn
                                 points for showing off your school spirit. Connect and compete with
@@ -285,7 +285,7 @@ const LandingPage = () => {
                                 the year.
                             </p>
                             <motion.button
-                                className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
+                                className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300" onClick={() => window.location.href = "/contact-us"}
                                 whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(219, 39, 119, 0.3)" }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -356,19 +356,19 @@ const LandingPage = () => {
             </section>
 
             {/* How It Works Section */}
-            <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative scroll-mt-24">
+            <section id="how-it-works" className="py-10 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white relative scroll-mt-24">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
-                        className="text-center mb-20"
+                        className="text-center mb-10 sm:mb-20"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                        <h2 className="text-2xl sm:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
                             How It Works
                         </h2>
-                        <p className="text-gray-500 text-lg">Follow these simple steps to get started and stand out.</p>
+                        <p className="text-gray-500 text-base sm:text-lg">Follow these simple steps to get started and stand out.</p>
                     </motion.div>
 
                     <div className="relative border-l-4 border-pink-500 pl-6 space-y-14">
@@ -391,7 +391,7 @@ const LandingPage = () => {
                                         <div className="text-3xl bg-gradient-to-tr from-pink-500 to-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300">
                                             {step.icon}
                                         </div>
-                                        <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-pink-600 transition">
+                                        <h3 className="text-l sm:text-2xl font-semibold text-gray-800 group-hover:text-pink-600 transition">
                                             {step.title}
                                         </h3>
                                     </div>
@@ -404,16 +404,16 @@ const LandingPage = () => {
             </section>
 
             {/* FAQs Section */}
-            <section id="faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-white scroll-mt-24">
+            <section id="faqs" className="py-10 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white scroll-mt-24">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
-                        className="text-center mb-16"
+                        className="text-center mb-6 sm:mb-16"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-2xl sm:text-5xl font-bold text-gray-900">
                             FAQs
                         </h2>
                     </motion.div>
@@ -459,22 +459,18 @@ const LandingPage = () => {
                                             transition={{ duration: 0.5, ease: "easeInOut" }}
                                         >
                                             <div className="px-6 py-4 bg-white border-t border-gray-200">
-                                                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                                                <p className="text-[14px] sm:text-base text-gray-700 leading-relaxed">{faq.answer}</p>
                                             </div>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
                             </motion.div>
                         ))}
-
-
                     </motion.div>
                 </div>
             </section>
-
             <Footer />
         </div>
     )
 }
-
 export default LandingPage

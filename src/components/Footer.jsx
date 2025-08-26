@@ -49,9 +49,9 @@ const Footer = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/20 to-pink-500/20"></div>
-        <motion.div 
+        <motion.div
           className="absolute top-20 right-20 w-32 h-32 bg-purple-500 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]
           }}
@@ -61,9 +61,9 @@ const Footer = () => {
             ease: "easeInOut"
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 left-20 w-24 h-24 bg-pink-500 rounded-full blur-2xl"
-          animate={{ 
+          animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.7, 0.3]
           }}
@@ -90,7 +90,7 @@ const Footer = () => {
               className="mb-6"
               variants={itemVariants}
             >
-              <motion.h3 
+              <motion.h3
                 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -137,64 +137,65 @@ const Footer = () => {
             </motion.div>
           </div>
 
-          {/* Quick Links */}
-          <motion.div variants={itemVariants}>
-            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-3">
-              {[
-                { href: "#introduction", label: "Introduction" },
-                { href: "#how-it-works", label: "How It Works" },
-                { href: "#faqs", label: "FAQs" },
-                { href: "#", label: "Download App" }
-              ].map((link, index) => (
-                <li key={index}>
-                  <motion.a
-                    href={link.href}
-                    className="group text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2"
-                    variants={linkVariants}
-                    whileHover="hover"
-                  >
-                    <motion.span 
-                      className="w-1 h-1 bg-purple-500 rounded-full"
-                      whileHover={{ scale: 1.5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    />
-                    {link.label}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Support */}
-          <motion.div variants={itemVariants}>
-            <h4 className="text-lg font-semibold mb-4 text-white">Support</h4>
-            <ul className="space-y-3">
-              {[
-                { href: "#", label: "Contact Us" },
-                { href: "/privacy-policy", label: "Privacy Policy" },
-                { href: "/terms-of-service", label: "Terms of Service" }
-              ].map((link, index) => (
-                <li key={index}>
-                  <motion.a
-                    href={link.href}
-                    className="group text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2"
-                    variants={linkVariants}
-                    whileHover="hover"
-                  >
-                    <motion.span
-                      className="w-1.5 h-1.5 bg-pink-500 rounded-full"
-                      whileHover={{ scale: 1.5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    />
-                    {link.label}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
+          {/* Links Section (Quick Links + Support) */}
+          <motion.div className="grid grid-cols-2 gap-8 md:col-span-2" variants={itemVariants}>
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+              <ul className="space-y-3">
+                {[
+                  { href: "#introduction", label: "Introduction" },
+                  { href: "#how-it-works", label: "How It Works" },
+                  { href: "#faqs", label: "FAQs" },
+                  { href: "#", label: "Download App" }
+                ].map((link, index) => (
+                  <li key={index}>
+                    <motion.a
+                      href={link.href}
+                      className="group text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2"
+                      variants={linkVariants}
+                      whileHover="hover"
+                    >
+                      <motion.span
+                        className="w-1 h-1 bg-purple-500 rounded-full"
+                        whileHover={{ scale: 1.5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      />
+                      {link.label}
+                    </motion.a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Support */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-white">Support</h4>
+              <ul className="space-y-3">
+                {[
+                  { href: "/contact-us", label: "Contact Us" },
+                  { href: "/privacy-policy", label: "Privacy Policy" },
+                  { href: "/terms-of-service", label: "Terms of Service" }
+                ].map((link, index) => (
+                  <li key={index}>
+                    <motion.a
+                      href={link.href}
+                      className="group text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2"
+                      variants={linkVariants}
+                      whileHover="hover"
+                    >
+                      <motion.span
+                        className="w-1.5 h-1.5 bg-pink-500 rounded-full"
+                        whileHover={{ scale: 1.5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      />
+                      {link.label}
+                    </motion.a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         </motion.div>
-
         {/* Bottom Section */}
         <motion.div
           className="border-t border-gray-800 mt-12 pt-8"
@@ -229,5 +230,4 @@ const Footer = () => {
     </footer>
   )
 }
-
 export default Footer

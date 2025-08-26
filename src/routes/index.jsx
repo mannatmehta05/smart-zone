@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import LandingPage from "../pages/landingPage";
 import TermsOfServices from "../pages/termsOfServices";
 import PrivacyPolicy from "../pages/privacyPolicy";
+import ContactUs from "../pages/conatctUs";
 export const routes = createBrowserRouter([
     {
         path: "/",
@@ -14,5 +15,9 @@ export const routes = createBrowserRouter([
     {
         path: "/privacy-policy",
         element: <PrivacyPolicy/>,
+    },
+    {
+        path:"/contact-us",
+        element:<ContactUs/>
     }
 ]);
