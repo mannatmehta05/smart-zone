@@ -33,18 +33,12 @@ const PrivacyPolicy = () => {
 
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 relative overflow-hidden">
-			{/* Elegant Background Pattern */}
 			<div className="absolute inset-0">
-				{/* Subtle geometric pattern */}
 				<div className="absolute inset-0 opacity-5">
 					<div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
 				</div>
-
-				{/* Royal gradient overlays */}
 				<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-900/30 via-transparent to-blue-900/30"></div>
 				<div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-slate-800/20 via-transparent to-indigo-800/20"></div>
-
-				{/* Animated floating elements */}
 				<motion.div
 					className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-indigo-600/10 to-blue-600/10 rounded-full blur-3xl"
 					animate={{
@@ -72,14 +66,10 @@ const PrivacyPolicy = () => {
 						delay: 5
 					}}
 				/>
-
-				{/* Subtle grid pattern */}
 				<div className="absolute inset-0 opacity-10">
 					<div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:50px_50px]"></div>
 				</div>
 			</div>
-
-			{/* Content */}
 			<div className="relative z-10">
 				<Header />
 				<main className="pt-32 sm:pt-40 pb-24 px-4 sm:px-8 lg:px-16">
@@ -100,7 +90,6 @@ const PrivacyPolicy = () => {
 							>
 								PRIVACY POLICY
 							</motion.h1>
-							{/* Content Section */}
 							<motion.div
 								variants={containerVariants}
 								className="space-y-8"
@@ -109,7 +98,6 @@ const PrivacyPolicy = () => {
 									variants={itemVariants}
 									className="prose prose-base sm:prose-lg md:prose-xl prose-invert max-w-none p-6 sm:p-8 lg:p-12 bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-white/10 shadow-2xl"
 								>
-									{/* Section 1 */}
 									<motion.h2
 										variants={fadeInUp}
 										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
@@ -126,7 +114,6 @@ const PrivacyPolicy = () => {
 										Valid ID proof is mandatory for selling or exchanging used smartphones.
 									</motion.p>
 
-									{/* Section 2 */}
 									<motion.h2
 										variants={fadeInUp}
 										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
@@ -143,7 +130,6 @@ const PrivacyPolicy = () => {
 										All used devices are checked for stolen/lost status via IMEI verification.
 									</motion.p>
 
-									{/* Section 3 */}
 									<motion.h2
 										variants={fadeInUp}
 										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
@@ -160,7 +146,6 @@ const PrivacyPolicy = () => {
 										Customers are responsible for backing up their data before service, repair, or resale.
 									</motion.p>
 
-									{/* Section 4 */}
 									<motion.h2
 										variants={fadeInUp}
 										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
@@ -177,7 +162,6 @@ const PrivacyPolicy = () => {
 										We take reasonable security steps to protect your personal information from unauthorized access.
 									</motion.p>
 
-									{/* Section 5 */}
 									<motion.h2
 										variants={fadeInUp}
 										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
@@ -194,7 +178,6 @@ const PrivacyPolicy = () => {
 										We keep customer records only as long as necessary for legal, tax, and service purposes.
 									</motion.p>
 
-									{/* Section 6 */}
 									<motion.h2
 										variants={fadeInUp}
 										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
@@ -211,7 +194,6 @@ const PrivacyPolicy = () => {
 										We may suspend or terminate access to the Service for behavior that violates these Terms or school policies.
 									</motion.p>
 
-									{/* Section 7 */}
 									<motion.h2
 										variants={fadeInUp}
 										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"
@@ -228,7 +210,6 @@ const PrivacyPolicy = () => {
 										Personal data is used to complete purchases, verify ownership, process warranties, and prevent fraud.
 									</motion.p>
 
-									{/* Section 10 */}
 									<motion.h2
 										variants={fadeInUp}
 										className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center"

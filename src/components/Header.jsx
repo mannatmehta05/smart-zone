@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const gradientClass = 'bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500';
 const hoverGradient = 'hover:from-pink-600 hover:via-purple-600 hover:to-indigo-600';
@@ -37,8 +38,8 @@ const Header = () => {
       key={item.href}
       onClick={() => handleNavClick(item.href)}
       className={`group cursor-pointer ${mobile
-          ? 'block text-base px-3 py-2 rounded-lg hover:bg-pink-50'
-          : 'relative text-sm px-3 py-2'
+        ? 'block text-base px-3 py-2 rounded-lg hover:bg-pink-50'
+        : 'relative text-sm px-3 py-2'
         } text-gray-700 hover:text-pink-600 font-medium transition-all duration-300`}
       initial="hidden"
       animate="visible"
@@ -62,8 +63,8 @@ const Header = () => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <span className="flex items-center justify-center gap-2">
-        Get Started
+      <span className="flex items-center justify-center gap-2" onClick={() => navigate('/contact-us')}>
+        Contact Us
         <motion.svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" whileHover={{ x: 3 }}>
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </motion.svg>
@@ -74,8 +75,8 @@ const Header = () => {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 ${scrolled
-        ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-200/50'
-        : 'bg-white/80 backdrop-blur-md border-b border-gray-200/30'
+        ? 'bg-white backdrop-blur-xl shadow-lg border-b border-gray-200/50'
+        : 'bg-white backdrop-blur-md border-b border-gray-200/30'
         }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -84,14 +85,19 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 pt-4 pb-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <motion.h1
+          {/* <motion.h1
             className={`text-3xl font-bold bg-clip-text text-transparent cursor-pointer ${gradientClass}`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate('/')}
-          >
-            TrackInventory
-          </motion.h1>
+          > */}
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-10 w-auto sm:h-12 md:h-14 lg:h-20 object-contain"
+          />
+
+          {/* </motion.h1> */}
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
@@ -126,7 +132,7 @@ const Header = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200/50">
-                {navItems.map((item, index) => <NavLink key={index} item={item} index={index} mobile/>)}
+                {navItems.map((item, index) => <NavLink key={index} item={item} index={index} mobile />)}
                 <div className="pt-4"><CTAButton mobile /></div>
               </div>
             </motion.div>

@@ -33,18 +33,12 @@ const TermsOfServices = () => {
 
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 relative overflow-hidden">
-			{/* Elegant Background Pattern */}
 			<div className="absolute inset-0">
-				{/* Subtle geometric pattern */}
 				<div className="absolute inset-0 opacity-5">
 					<div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
 				</div>
-
-				{/* Royal gradient overlays */}
 				<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-900/30 via-transparent to-blue-900/30"></div>
 				<div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-slate-800/20 via-transparent to-indigo-800/20"></div>
-
-				{/* Animated floating elements */}
 				<motion.div
 					className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-indigo-600/10 to-blue-600/10 rounded-full blur-3xl"
 					animate={{
@@ -72,14 +66,10 @@ const TermsOfServices = () => {
 						delay: 5
 					}}
 				/>
-
-				{/* Subtle grid pattern */}
 				<div className="absolute inset-0 opacity-10">
 					<div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:50px_50px]"></div>
 				</div>
 			</div>
-
-			{/* Content */}
 			<div className="relative z-10">
 				<Header />
 				<main className="pt-32 sm:pt-40 pb-24 px-4 sm:px-8 lg:px-16">
@@ -90,9 +80,18 @@ const TermsOfServices = () => {
 							animate="visible"
 							className="space-y-8"
 						>
+							<motion.h1
+								className="text-bold text-white text-4xl mb-8 transition-all duration-500 hover:text-indigo-400 hover:tracking-widest"
+								initial={{ opacity: 0, y: -20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{
+									duration: 1,
+								}}
+							>
 							<h1 className="text-bold text-white text-4xl mb-8 transition-all duration-700 hover:text-indigo-400 hover:tracking-widest">
 								TERMS OF SERVICE
 							</h1>
+							</motion.h1>
 							{/* Content Section */}
 							<motion.div
 								variants={containerVariants}
